@@ -24,12 +24,14 @@ The API very closely resembles the C library API, with the awkward bits (for PHP
 	bool ping(int dev);
 
 	/*
-	* 
+	* Shall return the response for the register challenge
+	* Note: shall throw an exception on error
 	*/
 	string register(string challenge, string origin, bool presence = false);
 
 	/*
-	* 
+	* Shall authenticate the challenge
+	* Note: shall throw an exception on error
 	*/
 	string authenticate(string challenge, string origin, bool presence = false);
 
